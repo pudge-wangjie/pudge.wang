@@ -1,0 +1,58 @@
+@import "../common/var.less";
+
+.el-header, .el-main, .el-footer {
+  padding: 0;
+}
+.el-header {
+  height: 130px!important;
+  border-bottom: 1px solid @hover-color;
+}
+.search-button {
+  display: none;
+}
+.button-grounp {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .el-header {
+    height: 100px!important;
+    .logo {
+      line-height: 100px;
+    }
+    nav {
+      li {
+        .li-main {
+          .iconfont {
+            font-size: 40px;
+          }
+          .title {
+            font-size: 12px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .search {
+      display: none;
+    }
+    .search-button {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .el-header {
+    height: 60px!important;
+    .logo {
+      line-height: 60px;
+    }
+    .search-button {
+      display: none;
+    }
+    .button-grounp {
+      display: block;
+    }
+  }
+}

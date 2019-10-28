@@ -1,0 +1,52 @@
+@import '../common/var.less';
+
+.search {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  border-left: 1px solid @hover-color;
+  .search-inset {
+    width: calc(100% - 80px);
+    height: 60px;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    .left {
+      width: calc(100% - 66px);
+      height: 100%;
+      display: flex;
+      input {
+        width: calc(100% - 50px);
+        height: 22px;
+        margin: auto;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+    .right {
+      width: 66px;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        @gradient-left-color,
+        @gradient-right-color
+      );
+      display: flex;
+      cursor: pointer;
+      .iconfont {
+        margin: auto;
+        font-size: 24px;
+        font-weight: 900;
+        margin-left: 17px;
+      }
+    }
+  }
+  .focusInBox {
+    border-color: rgb(255, 76, 76);
+  }
+}
