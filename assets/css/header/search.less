@@ -1,7 +1,6 @@
 @import '../common/var.less';
 
 .search {
-  flex: 2;
   height: 100%;
   display: flex;
   border-left: 1px solid @hover-color;
@@ -9,14 +8,18 @@
     width: calc(100% - 80px);
     height: 60px;
     margin: auto;
-    border: 2px solid #fff;
+    padding: 2px;
     border-radius: 30px;
     display: flex;
     overflow: hidden;
+    background: #fff;
     .left {
       width: calc(100% - 66px);
       height: 100%;
       display: flex;
+      background: @bg-color;
+      border-top-left-radius: 28px;
+      border-bottom-left-radius: 28px;
       input {
         width: calc(100% - 50px);
         height: 22px;
@@ -38,6 +41,8 @@
       );
       display: flex;
       cursor: pointer;
+      border-top-right-radius: 28px;
+      border-bottom-right-radius: 28px;
       .iconfont {
         margin: auto;
         font-size: 24px;
@@ -46,7 +51,11 @@
       }
     }
   }
-  .focusInBox {
-    border-color: rgb(255, 76, 76);
-  }
+}
+.search-inset:focus-within {
+  background: linear-gradient(
+    to right,
+    @gradient-left-color,
+    @gradient-right-color
+  );
 }

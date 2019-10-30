@@ -1,12 +1,10 @@
 <template>
   <div class="search">
-    <div class="search-inset" :class="{focusInBox: inputFocus}">
+    <div class="search-inset">
       <div class="left">
         <input
           type="text"
           placeholder="全局标签搜索，如 css"
-          @focus="inputFocus = true"
-          @blur="inputFocus = false"
         />
       </div>
       <div class="right">
@@ -19,9 +17,7 @@
 <script>
 export default {
   data() {
-    return {
-      inputFocus: false
-    }
+    return {}
   }
 }
 </script>

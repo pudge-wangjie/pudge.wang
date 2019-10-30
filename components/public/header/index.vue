@@ -12,7 +12,8 @@
       <Search-s />
     </el-col>
     <el-col :xs="24" :sm="24" :lg="24">
-      <div class="grid-content bg-purple hidden-lg-and-up">44</div>
+      <SearchOut class="hidden-lg-and-up"/>
+      <!-- <div class="grid-content bg-purple ">44</div> -->
     </el-col>
   </el-row>
 </template>
@@ -23,6 +24,7 @@ import Nav from './nav';
 import Search from './search';
 import SearchM from './search-m';
 import SearchS from './search-s';
+import SearchOut from './search-out'
 
 export default {
   components: {
@@ -30,7 +32,8 @@ export default {
     Nav,
     Search,
     SearchM,
-    SearchS
+    SearchS,
+    SearchOut
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        pudge_wj
+        asd
       </h1>
       <h2 class="subtitle">
         My brilliant Nuxt.js project
@@ -34,6 +34,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  computed: {
+    // asd() {
+    //   return this.$store.state.header.aaa;
+    // }
   }
 }
 </script>

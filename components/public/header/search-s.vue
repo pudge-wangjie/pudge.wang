@@ -1,7 +1,7 @@
 <template>
   <div class="button-grounp">
-    <div class="g-left" @click="outSearchShow = !outSearchShow">
-      <span class="iconfont icon-fangdajing" v-if="!outSearchShow"></span>
+    <div class="g-left" @click="changeOutSearch">
+      <span class="iconfont icon-fangdajing" v-if="!searchOutShow"></span>
       <span class="iconfont icon-guanbi" v-else></span>
     </div>
     <div class="g-right" :class="{rightActive: outListShow}" @click="outListShow = !outListShow">
@@ -15,8 +15,21 @@
 export default {
   data() {
     return {
-      outSearchShow: false,
       outListShow: false
+    }
+  },
+  computed: {
+    searchOutShow() {
+      return this.$store.state.header.searchOutShow;
+    }
+  },
+  methods: {
+    changeOutSearch() {
+      if (this.searchOutShow) {
+        this.$store.commit('header/change', false)
+      } else {
+        this.$store.commit('header/change', true)
+      }
     }
   }
 }
